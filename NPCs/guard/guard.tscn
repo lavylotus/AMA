@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://cv3j3ki1rxi5y"]
+[gd_scene load_steps=27 format=3 uid="uid://cv3j3ki1rxi5y"]
 
 [ext_resource type="Texture2D" uid="uid://bs1urrqvgwlx2" path="res://NPCs/guard/guard.png" id="1"]
 [ext_resource type="Script" path="res://NPCs/guard/guard.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://20prp8jhqcjw" path="res://NPCs/guard/guard2.png" id="3_2s623"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_voyuu"]
 size = Vector2(15, 30)
@@ -50,6 +51,42 @@ region = Rect2(0, 96, 32, 32)
 atlas = ExtResource("1")
 region = Rect2(32, 96, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_xc5ia"]
+atlas = ExtResource("3_2s623")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hlu31"]
+atlas = ExtResource("3_2s623")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0vib4"]
+atlas = ExtResource("3_2s623")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bu7ml"]
+atlas = ExtResource("3_2s623")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ar0y1"]
+atlas = ExtResource("3_2s623")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u80em"]
+atlas = ExtResource("3_2s623")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pjtt2"]
+atlas = ExtResource("3_2s623")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2888c"]
+atlas = ExtResource("3_2s623")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8r4k7"]
+atlas = ExtResource("3_2s623")
+region = Rect2(128, 128, 64, 64)
+
 [sub_resource type="SpriteFrames" id="12"]
 animations = [{
 "frames": [{
@@ -89,10 +126,42 @@ animations = [{
 "loop": true,
 "name": &"idle",
 "speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xc5ia")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hlu31")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0vib4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bu7ml")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ar0y1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u80em")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pjtt2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2888c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8r4k7")
+}],
+"loop": true,
+"name": &"idle_new",
+"speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_47f8h"]
-size = Vector2(28, 36)
+size = Vector2(53, 60.5)
 
 [node name="Guard" type="CharacterBody2D" groups=["talkable"]]
 collision_layer = 2
@@ -104,9 +173,11 @@ shape = SubResource("RectangleShape2D_voyuu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("12")
-animation = &"idle"
+animation = &"idle_new"
+frame_progress = 0.891139
 
 [node name="Area2D" type="Area2D" parent="." groups=["talkable"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["talkable"]]
+position = Vector2(1.5, -0.75)
 shape = SubResource("RectangleShape2D_47f8h")

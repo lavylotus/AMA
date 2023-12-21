@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://bh3fto1ck4yu4"]
+
+[ext_resource type="Script" path="res://Dialogue/dialogue_box.gd" id="1_2kliw"]
+[ext_resource type="Script" path="res://Dialogue/main.gd" id="1_3db8r"]
+[ext_resource type="JSON" path="res://Dialogue/dialogue.json" id="2_0p7cx"]
+[ext_resource type="Script" path="res://addons/ez_dialogue/ez_dialogue_node.gd" id="3_olshk"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_3db8r")
+dialogueJSON = ExtResource("2_0p7cx")
+
+[node name="dialogue_box" type="Node2D" parent="."]
+script = ExtResource("1_2kliw")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="dialogue_box"]
+offset_left = 390.0
+offset_top = 427.0
+offset_right = 537.0
+offset_bottom = 520.0
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="dialogue_box/VBoxContainer"]
+layout_mode = 2
+text = "Test Dialogue Here"
+
+[node name="EzDialogue" type="Node" parent="."]
+script = ExtResource("3_olshk")
+
+[connection signal="dialogue_generated" from="EzDialogue" to="." method="_on_ez_dialogue_dialogue_generated"]

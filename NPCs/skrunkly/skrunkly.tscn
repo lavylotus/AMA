@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://cjheuqtraqs4i"]
+
+[ext_resource type="Texture2D" uid="uid://boqr7u81tonb" path="res://NPCs/skrunkly/skrunkly_shorts.png" id="1_j7idu"]
+[ext_resource type="Script" path="res://NPCs/skrunkly/skrunkly.gd" id="1_w1kbn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_df7y6"]
+size = Vector2(30, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eo6i3"]
+atlas = ExtResource("1_j7idu")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_plqmp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eo6i3")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Skrunkly" type="CharacterBody2D"]
+script = ExtResource("1_w1kbn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_df7y6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_plqmp")
+animation = &"idle"

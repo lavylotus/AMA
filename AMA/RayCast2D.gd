@@ -5,4 +5,4 @@ func _process(delta):
 		emit_signal("_on_dialogue_body_entered")
 		
 	else:
-		emit_signal("_on_dialogue_body_exited")
+		emit_signal("_on_dialogue_body_exited"

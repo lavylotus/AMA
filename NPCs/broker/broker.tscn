@@ -199,3 +199,7 @@ shape = SubResource("CapsuleShape2D_o2due")
 sprite_frames = SubResource("SpriteFrames_bnvm3")
 animation = &"idle"
 frame_progress = 0.219474
+
+[node name="animationTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="animationTimer" to="." method="_on_animation_timer_timeout"]

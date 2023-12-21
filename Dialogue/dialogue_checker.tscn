@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://b87dnvx3l3q2o"]
+
+[node name="dialogue_checker" type="Area2D"]
+collision_layer = 256
