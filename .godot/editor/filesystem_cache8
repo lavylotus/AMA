@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1703172013
+::res://::1703437565
 README.md::TextFile::-1::1703017253::0::1::::<><>::
 ::res://addons/::1703170796
 ::res://addons/dialogic/::1702925067
@@ -606,10 +606,12 @@ main.tscn::PackedScene::6824435439852214696::1703170752::0::1::::<><>::res://add
 main_panel.gd::GDScript::-1::1703170752::0::1::::MainDiagPanel<>Panel<>::
 name_editor.gd::GDScript::-1::1703170752::0::1::::<>LineEdit<>::
 ProggyVector Regular.ttf::FontFile::6705049430897039259::1703170751::1703170804::1::::<><>::
-::res://AMA/::1703175060
-AMA.gd::GDScript::-1::1703175060::0::1::::<>CharacterBody2D<>::
-AMA.tscn::PackedScene::8782951012811607024::1703174848::0::1::::<><>::uid://b3drubtc0lfd3::::res://AMA/AMA Animations/AMA_back_walk2.png<>uid://btvtcf1m8htmb::::res://AMA/AMA Animations/AMA_front_walk_2.png<>res://AMA/AMA.gd<>uid://1yjmdqc1oiyg::::res://AMA/AMA Animations/helicopter.png<>uid://dhbnvw78tnn7m::::res://AMA/AMA Animations/idle.png<>uid://dyefhr2gayagq::::res://AMA/AMA Animations/walk.png<>uid://0x5dab12bo4::::res://AMA/AMA Animations/sleepy_idle.png<>res://AMA/RayCast2D.gd
-RayCast2D.gd::GDScript::-1::1703174740::0::1::::<>RayCast2D<>::
+::res://AMA/::1703269982
+AMA.gd::GDScript::-1::1703269972::0::1::::<>CharacterBody2D<>::
+AMA.tscn::PackedScene::8782951012811607024::1703269982::0::1::::<><>::uid://b3drubtc0lfd3::::res://AMA/AMA Animations/AMA_back_walk2.png<>uid://btvtcf1m8htmb::::res://AMA/AMA Animations/AMA_front_walk_2.png<>res://AMA/AMA.gd<>uid://1yjmdqc1oiyg::::res://AMA/AMA Animations/helicopter.png<>uid://dhbnvw78tnn7m::::res://AMA/AMA Animations/idle.png<>uid://dyefhr2gayagq::::res://AMA/AMA Animations/walk.png<>uid://0x5dab12bo4::::res://AMA/AMA Animations/sleepy_idle.png
+Area2D.gd::GDScript::-1::1703268908::0::1::::<>RefCounted<>::
+CollisionShape2D.gd::GDScript::-1::1703268996::0::1::::<>CollisionShape2D<>::
+RayCast2D.gd::GDScript::-1::1703182543::0::1::::<>RayCast2D<>::
 ::res://AMA/AMA Animations/::1703017819
 AMA_back_walk2.png::CompressedTexture2D::4358969425574666494::1702922119::1703017819::1::::<><>::
 AMA_front_walk_2.png::CompressedTexture2D::3764518143472631469::1702922119::1703017819::1::::<><>::
@@ -617,29 +619,32 @@ helicopter.png::CompressedTexture2D::1875023065561130534::1665621064::1703017819
 idle.png::CompressedTexture2D::7653476363350287416::1665584626::1703017819::1::::<><>::
 sleepy_idle.png::CompressedTexture2D::53059666153563413::1665585366::1703017819::1::::<><>::
 walk.png::CompressedTexture2D::8852368829809713820::1665583759::1703017819::1::::<><>::
-::res://Dialogue/::1703175175
+::res://Dialogue/::1703270328
+broker.json::JSON::-1::1703269913::0::1::::<><>::
 ChoiceButton.gd::GDScript::-1::1703173320::0::1::::ChoiceButton<>Button<>::
-choice_button.tscn::PackedScene::8722679379967891598::1703174849::0::1::::<><>::res://Dialogue/ChoiceButton.gd
-dialogue.gd::GDScript::-1::1703171994::0::1::::Actionable<>Area2D<>::
-dialogue.json::JSON::-1::1703174663::0::1::::<><>::
-dialogue.tscn::PackedScene::2935883456918246125::1703175194::0::1::::<><>::res://Dialogue/dialogue_box.gd<>res://Dialogue/loadJSON.gd<>res://Dialogue/dialogue.json<>res://addons/ez_dialogue/ez_dialogue_node.gd
-dialogue_box.gd::GDScript::-1::1703175175::0::1::::<>Node2D<>::
-loadJSON.gd::GDScript::-1::1703174826::0::1::::<>Node2D<>::
+choice_button.tscn::PackedScene::8722679379967891598::1703184795::0::1::::<><>::res://Dialogue/ChoiceButton.gd
+dialogue.json::JSON::-1::1703199882::0::1::::<><>::
+dialogue.tscn::PackedScene::2935883456918246125::1703269982::0::1::::<><>::res://Dialogue/dialogue_box.gd<>res://Dialogue/main.gd<>res://Dialogue/dialogue.json<>res://addons/ez_dialogue/ez_dialogue_node.gd<>uid://bdnnw1fifws4f::::res://Dialogue/pressed_button.tres<>uid://e8emfcn1xccu::::res://Dialogue/VT323-Regular.ttf
+dialogue_box.gd::GDScript::-1::1703195844::0::1::::<>Node2D<>::
+dialogue_checker.tscn::PackedScene::4768919117986011700::1703269296::0::1::::<><>::
+main.gd::GDScript::-1::1703270328::0::1::::<>Node2D<>::
+pressed_button.tres::StyleBoxFlat::2624654107484024423::1703197969::0::1::::<><>::
+VT323-Regular.ttf::FontFile::349144404266697944::1703199680::1703199683::1::::<><>::
 ::res://Forest Assets/::1702923156
 TX Tileset Grass.png::CompressedTexture2D::2599161062607283489::1702826349::1702923156::1::::<><>::
 ::res://NPCs/::1703096871
-::res://NPCs/broker/::1703097193
+::res://NPCs/broker/::1703269982
 broker.gd::GDScript::-1::1703018803::0::1::::<>CharacterBody2D<>::
-broker.tscn::PackedScene::3085845249291531106::1703097193::0::1::::<><>::res://NPCs/broker/broker.gd<>uid://c7mqfvgd2l082::::res://NPCs/broker/broker_idle.png<>uid://bfaypc8cndbst::::res://NPCs/broker/broker_broke.png
+broker.tscn::PackedScene::3085845249291531106::1703269982::0::1::::<><>::res://NPCs/broker/broker.gd<>uid://c7mqfvgd2l082::::res://NPCs/broker/broker_idle.png<>uid://bfaypc8cndbst::::res://NPCs/broker/broker_broke.png
 broker_broke.png::CompressedTexture2D::2738849052751840483::1703005768::1703005814::1::::<><>::
 broker_idle.png::CompressedTexture2D::7044638410137772873::1703005507::1703005814::1::::<><>::
 Timer.gd::GDScript::-1::1703018875::0::1::::<>Timer<>::
-::res://NPCs/guard/::1703097193
+::res://NPCs/guard/::1703269296
 guard2.png::CompressedTexture2D::1947650174713951520::1703089283::1703089329::1::::<><>::
 guard.dch::Resource::-1::1702990404::0::1::::<><>::
 guard.gd::GDScript::-1::1703089388::0::1::::<>CharacterBody2D<>::
 guard.png::CompressedTexture2D::3704739307711813893::1702918430::1702929894::1::::<><>::
-guard.tscn::PackedScene::6305206654859680956::1703097193::0::1::::<><>::uid://bs1urrqvgwlx2::::res://NPCs/guard/guard.png<>res://NPCs/guard/guard.gd<>uid://20prp8jhqcjw::::res://NPCs/guard/guard2.png
+guard.tscn::PackedScene::6305206654859680956::1703269296::0::1::::<><>::uid://bs1urrqvgwlx2::::res://NPCs/guard/guard.png<>res://NPCs/guard/guard.gd<>uid://20prp8jhqcjw::::res://NPCs/guard/guard2.png
 Screenshot 2023-12-18 162208.png::CompressedTexture2D::8887665121882592909::1702938417::1702938424::1::::<><>::
 ::res://NPCs/skrunkly/::1703097194
 skrunkly.gd::GDScript::-1::1703097066::0::1::::<>CharacterBody2D<>::
@@ -649,8 +654,8 @@ skrunkly_shorts.png::CompressedTexture2D::100093675753685963::1703096884::170309
 st8ble.gd::GDScript::-1::1703009801::0::1::::<>CharacterBody2D<>::
 st8ble.tscn::PackedScene::5138379222695576733::1703097193::0::1::::<><>::uid://ea5fmbk6nl03::::res://NPCs/st8ble/st8bl_idle.png<>res://NPCs/st8ble/st8ble.gd
 st8bl_idle.png::CompressedTexture2D::282586445625959282::1703009598::1703009603::1::::<><>::
-::res://Scenes/::1703174849
-home.tscn::PackedScene::5150314706656141702::1703174849::0::1::::<><>::uid://bdbb2khq7ys0h::::res://Forest Assets/TX Tileset Grass.png<>uid://cv3j3ki1rxi5y::::res://NPCs/guard/guard.tscn<>uid://bj72oj8yu0flq::::res://NPCs/broker/broker.tscn<>uid://bnvo608cjho6e::::res://Scenes/scene_transition.tscn<>uid://dxer6jqy108s7::::res://AMA/AMA.tscn<>uid://cfhcmcpyome10::::res://NPCs/st8ble/st8ble.tscn<>uid://cjheuqtraqs4i::::res://NPCs/skrunkly/skrunkly.tscn
+::res://Scenes/::1703269982
+home.tscn::PackedScene::5150314706656141702::1703269982::0::1::::<><>::uid://bdbb2khq7ys0h::::res://Forest Assets/TX Tileset Grass.png<>uid://cv3j3ki1rxi5y::::res://NPCs/guard/guard.tscn<>res://Dialogue/broker.json<>uid://bh3fto1ck4yu4::::res://Dialogue/dialogue.tscn<>uid://bj72oj8yu0flq::::res://NPCs/broker/broker.tscn<>uid://dxer6jqy108s7::::res://AMA/AMA.tscn<>uid://b87dnvx3l3q2o::::res://Dialogue/dialogue_checker.tscn
 sample_scene_change.tscn::PackedScene::4933412005273999935::1703017818::0::1::::<><>::uid://bdbb2khq7ys0h::::res://Forest Assets/TX Tileset Grass.png<>uid://dxer6jqy108s7::::res://AMA/AMA.tscn
 scene_transition.gd::GDScript::-1::1702940747::0::1::::<>Area2D<>::
 scene_transition.tscn::PackedScene::3343134345498049186::1702992773::0::1::::<><>::res://Scenes/scene_transition.gd

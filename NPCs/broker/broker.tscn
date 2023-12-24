@@ -4,9 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://c7mqfvgd2l082" path="res://NPCs/broker/broker_idle.png" id="1_qtw00"]
 [ext_resource type="Texture2D" uid="uid://bfaypc8cndbst" path="res://NPCs/broker/broker_broke.png" id="2_vawd6"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o2due"]
-radius = 24.0
-height = 56.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uwsla"]
+size = Vector2(58, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3vi2j"]
 atlas = ExtResource("2_vawd6")
@@ -190,10 +189,14 @@ animations = [{
 }]
 
 [node name="Broker" type="CharacterBody2D"]
+z_index = 1
+y_sort_enabled = true
+collision_layer = 2
 script = ExtResource("1_3ujbe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_o2due")
+position = Vector2(0, 22)
+shape = SubResource("RectangleShape2D_uwsla")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_bnvm3")

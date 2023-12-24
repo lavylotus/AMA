@@ -1,8 +1,10 @@
+CollisionShape2D
+Control
+ColorRect
 Button
 ParallaxBackground
 ParallaxLayer
 CanvasGroup
-CollisionShape2D
 Area2D
 EzDialogue
 Label
@@ -10,5 +12,3 @@ VBoxContainer
 Node2D
 AnimatedSprite2D
 CharacterBody2D
-Timer
-AnimationPlayer

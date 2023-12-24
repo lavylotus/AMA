@@ -1,11 +1,11 @@
-[gd_scene load_steps=27 format=3 uid="uid://cv3j3ki1rxi5y"]
+[gd_scene load_steps=26 format=3 uid="uid://cv3j3ki1rxi5y"]
 
 [ext_resource type="Texture2D" uid="uid://bs1urrqvgwlx2" path="res://NPCs/guard/guard.png" id="1"]
 [ext_resource type="Script" path="res://NPCs/guard/guard.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://20prp8jhqcjw" path="res://NPCs/guard/guard2.png" id="3_2s623"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_voyuu"]
-size = Vector2(15, 30)
+size = Vector2(38, 14)
 
 [sub_resource type="AtlasTexture" id="1"]
 atlas = ExtResource("1")
@@ -160,24 +160,17 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_47f8h"]
-size = Vector2(53, 60.5)
-
 [node name="Guard" type="CharacterBody2D" groups=["talkable"]]
+z_index = 1
+y_sort_enabled = true
 collision_layer = 2
 script = ExtResource("2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 0)
+position = Vector2(0, 23)
 shape = SubResource("RectangleShape2D_voyuu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("12")
 animation = &"idle_new"
 frame_progress = 0.891139
-
-[node name="Area2D" type="Area2D" parent="." groups=["talkable"]]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["talkable"]]
-position = Vector2(1.5, -0.75)
-shape = SubResource("RectangleShape2D_47f8h")

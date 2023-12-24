@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://bh3fto1ck4yu4"]
+[gd_scene load_steps=11 format=3 uid="uid://bh3fto1ck4yu4"]
 
 [ext_resource type="Script" path="res://Dialogue/dialogue_box.gd" id="1_2kliw"]
 [ext_resource type="Script" path="res://Dialogue/main.gd" id="1_3db8r"]
 [ext_resource type="JSON" path="res://Dialogue/dialogue.json" id="2_0p7cx"]
 [ext_resource type="Script" path="res://addons/ez_dialogue/ez_dialogue_node.gd" id="3_olshk"]
 [ext_resource type="StyleBox" uid="uid://bdnnw1fifws4f" path="res://Dialogue/pressed_button.tres" id="4_v0cr4"]
+[ext_resource type="FontFile" uid="uid://e8emfcn1xccu" path="res://Dialogue/VT323-Regular.ttf" id="5_ttinj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ultm3"]
 bg_color = Color(0.341176, 0.854902, 0.662745, 1)
@@ -33,20 +34,58 @@ corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
+expand_margin_left = 4.0
 expand_margin_top = 2.0
+expand_margin_right = 4.0
 expand_margin_bottom = 4.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2gu03"]
+bg_color = Color(0.415686, 0.427451, 0.454902, 0)
+border_width_left = 2
+border_color = Color(0.8, 0.8, 0.8, 0)
+
 [sub_resource type="Theme" id="Theme_mei5x"]
+default_font = ExtResource("5_ttinj")
+default_font_size = 40
 Button/styles/focus = SubResource("StyleBoxFlat_ultm3")
 Button/styles/hover = SubResource("StyleBoxFlat_jci1s")
 Button/styles/normal = SubResource("StyleBoxFlat_jci1s")
 Button/styles/pressed = ExtResource("4_v0cr4")
+Label/styles/normal = SubResource("StyleBoxFlat_2gu03")
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(675, 727)
 script = ExtResource("1_3db8r")
 dialogueJSON = ExtResource("2_0p7cx")
 
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -3.0
+offset_top = -35.0
+offset_right = 37.0
+offset_bottom = 5.0
+
+[node name="ColorRect2" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 36.0
+offset_right = 551.0
+offset_bottom = 231.0
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 2
+offset_left = 12.0
+offset_top = 43.0
+offset_right = 541.0
+offset_bottom = 224.0
+color = Color(0, 0, 0, 1)
+
+[node name="EzDialogue" type="Node" parent="."]
+script = ExtResource("3_olshk")
+
 [node name="dialogue_box" type="Node2D" parent="."]
+position = Vector2(1, 1)
 script = ExtResource("1_2kliw")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="dialogue_box"]
@@ -55,19 +94,16 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 430.0
-offset_top = 434.0
-offset_right = 577.0
-offset_bottom = 527.0
+offset_left = 202.0
+offset_top = 77.0
+offset_right = 349.0
+offset_bottom = 170.0
 grow_horizontal = 2
 grow_vertical = 0
 theme = SubResource("Theme_mei5x")
 
 [node name="Label" type="Label" parent="dialogue_box/VBoxContainer"]
 layout_mode = 2
-
-[node name="EzDialogue" type="Node" parent="."]
-script = ExtResource("3_olshk")
 
 [connection signal="custom_signal_received" from="EzDialogue" to="." method="_on_ez_dialogue_custom_signal_received"]
 [connection signal="dialogue_generated" from="EzDialogue" to="." method="_on_ez_dialogue_dialogue_generated"]

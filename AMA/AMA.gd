@@ -8,9 +8,6 @@ signal EzDialogueStart
 @onready var canTalk = false
 @onready var activeDialogue = false
 
-#temporary timeline to figure out how dialogue works
-@export var timeline = "res://Dialogue/timeline.dtl"
-
 func playAnimation(direction):
 	if direction.x != 0:
 		
@@ -78,8 +75,9 @@ func _on_scene_transition_body_entered(_body):
 	if Input.is_action_pressed("action_1"):
 		get_tree().change_scene_to_file("res://Scenes/sample_scene_change.tscn")
 
-func _on_dialogue_checker_area_entered(area):
+func _on_dialogue_checker_area_entered(_area):
+	print("I'm turned on I guess")
 	canTalk = true
 	
-func _on_dialogue_checker_area_exited(area):
+func _on_dialogue_checker_area_exited(_area):
 	canTalk = false

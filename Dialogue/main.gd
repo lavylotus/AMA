@@ -13,9 +13,11 @@ extends Node2D
 func _ready():
 	var startFunction = target
 	startFunction.EzDialogueStart.connect(EzDialogueStart)
+	hide()
 
 func EzDialogueStart():
 	($EzDialogue as EzDialogue).start_dialogue(dialogueJSON, state)
+	show()
 	print("EzDialogueStart")
 	
 func _on_ez_dialogue_dialogue_generated(response: DialogueResponse):
@@ -23,8 +25,9 @@ func _on_ez_dialogue_dialogue_generated(response: DialogueResponse):
 	$dialogue_box.clear_dialogue_box()
 	
 	$dialogue_box.add_text(response.text)
-
-	if response.choices.is_empty():
+	
+	print(response.choices)
+	if response.choices.is_empty() && target.activeDialogue == true:
 		$dialogue_box.add_choice("v")
 		
 	else: 
@@ -45,3 +48,4 @@ func _on_ez_dialogue_end_of_dialogue_reached():
 	print("EzDialogue_ended")
 	$dialogue_box.is_dialogue_done = true
 	target.activeDialogue = false
+	hide()

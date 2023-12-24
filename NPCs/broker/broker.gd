@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-func _process(delta):
+func _process(_delta):
 	if $AnimatedSprite2D.animation != "break":
 		$AnimatedSprite2D.play("idle")
 		
